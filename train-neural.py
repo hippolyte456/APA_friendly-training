@@ -589,9 +589,8 @@ def main():
                                   target_conditioning=args.target_conditioning == "yes",
                                   sigmoid_postprocessing=args.sigmoid_postprocessing == "yes").to(device)
 
-    print(simplifier)
-
-    print(model)
+    #print(simplifier)
+    #print(model)
 
     optimizers = {}
     if args.optim == 'adadelta':
@@ -626,6 +625,7 @@ def main():
                        iterations_simp=args.iterations_simp,
                        scaling=args.scaling)
 
+    print('Results dictionary:')
     print(result_dic)
 
 
